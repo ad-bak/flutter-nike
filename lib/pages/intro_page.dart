@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:nike/main.dart';
+import 'package:nike/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -12,6 +14,7 @@ class IntroPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(25.0),
@@ -39,6 +42,8 @@ class IntroPage extends StatelessWidget {
               ),
               const SizedBox(height: 48),
               GestureDetector(
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage())),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[900],
