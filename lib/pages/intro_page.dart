@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:nike/main.dart';
 import 'package:nike/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
