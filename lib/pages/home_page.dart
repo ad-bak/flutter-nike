@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:nike/components/bottom_nav_bar.dart';
 import 'package:nike/pages/cart_page.dart';
 import 'package:nike/pages/shop_page.dart';
@@ -32,14 +33,31 @@ class _HomePageState extends State<HomePage> {
       ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.menu,
-            color: Colors.black,
-          ),
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          );
+        }),
+      ),
+      drawer: Drawer(
+        backgroundColor: Color(0xff121212),
+        child: Column(
+          children: [
+            Container(
+              height: 200,
+              padding: const EdgeInsets.only(top: 100),
+              child: Image.asset(
+                "assets/logo.png",
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
       body: _pages[_selectedIndex],
