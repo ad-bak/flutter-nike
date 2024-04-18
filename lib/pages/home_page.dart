@@ -46,15 +46,65 @@ class _HomePageState extends State<HomePage> {
         }),
       ),
       drawer: Drawer(
-        backgroundColor: Color(0xff121212),
+        backgroundColor: const Color(0xff121212),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              height: 200,
-              padding: const EdgeInsets.only(top: 100),
-              child: Image.asset(
-                "assets/logo.png",
-                color: Colors.white,
+            Column(
+              children: [
+                Container(
+                  height: 200,
+                  padding: const EdgeInsets.only(top: 100),
+                  child: Image.asset(
+                    "assets/logo.png",
+                    color: Colors.white,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 50, left: 20),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.home,
+                      color: Colors.white,
+                    ),
+                    title: Text(
+                      "Home",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, left: 20),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.info,
+                      color: Colors.white,
+                    ),
+                    title: Text(
+                      "About",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 20, left: 20),
+              child: ListTile(
+                leading: Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  "Logout",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
           ],
